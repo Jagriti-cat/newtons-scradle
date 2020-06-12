@@ -1,4 +1,4 @@
-var base,ball,string1;
+var base,ball,string1,ball1;
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
@@ -11,7 +11,8 @@ function setup() {
    
 base = new Base (250,100,250,30);
 ball = new Ball (250,150,40);
-string1 = new string(ball,base);
+ball1 = new Ball(100,150,40);
+string1 = new String(ball,ball1);
 }
 
 function draw() {
@@ -19,6 +20,7 @@ function draw() {
     Engine.update(engine);
     base.display();
     ball.display();
+    ball1.display();
     string1.display();
 
 }
